@@ -1,4 +1,5 @@
 import 'package:amar_school/screens/home_screen.dart';
+import 'package:amar_school/screens/log_in.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -21,14 +22,17 @@ class WelcomeScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 1.6,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 31, 100, 219),
+                    color: Color.fromARGB(255, 59, 90, 144),
                     borderRadius:
                         BorderRadius.only(bottomRight: Radius.circular(70)),
                   ),
                   child: Center(
-                    child: Image.asset(
-                      "assets/images/books.png",
-                      scale: 0.8,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top:190, ),
+                      child: Image.asset(
+                        "assets/images/wlLogo.png",
+                        scale: 0.8,
+                      ),
                     ),
                   ),
                 ),
@@ -41,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 2.666,
                 // color: Colors.redAccent,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 31, 100, 219),
+                  color: Color.fromARGB(255, 59, 90, 144),
                 ),
               ),
             ),
@@ -59,7 +63,7 @@ class WelcomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Learning Programming",
+                      "Learn Programming",
                       style: TextStyle(
                         fontSize: 25.0,
                         fontWeight: FontWeight.w600,
@@ -87,7 +91,8 @@ class WelcomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+                          // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),));
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(horizontal:60, vertical: 10 ),
